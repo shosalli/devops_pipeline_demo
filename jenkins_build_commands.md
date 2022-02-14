@@ -1,4 +1,4 @@
-# # Shell Commands to be added to Jenkins Job at Build & Post Build Phases # # 
+# # Shell Commands to be added to Jenkins Job at Build & Post Build Phases
 
 ```
 #!/bin/bash
@@ -30,8 +30,8 @@ sudo docker build -t devops_pipeline_demo .
 
 
 CONTAINER=devops_pipeline_demo
- 
-RUNNING=$(sudo docker inspect --format="{{ .State.Running }}" $CONTAINER 2> /dev/null)
+
+# RUNNING=$(sudo docker inspect --format="{{ .State.Running }}" $CONTAINER 2> /dev/null)
 
 if [ $? -eq 1 ]; then
   echo "'$CONTAINER' does not exist."
